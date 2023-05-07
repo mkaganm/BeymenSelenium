@@ -1,0 +1,16 @@
+options: [
+  '--start-maximized',
+  '--disable-notifications',
+  '--remote-allow-origins=*',
+  '--no-sandbox',
+  '--whitelisted-ips',
+  '--disable-popup-blocking',
+  '--disable-extensions',
+  '--disable-browser-side-navigation',
+  '--silent',
+  '--no-proxy-server',
+  '--dns-prefetch-disable',
+  '--disable-dev-shm-usage',
+  '--disable-application-cache',
+  '"--disable-cache',
+]
