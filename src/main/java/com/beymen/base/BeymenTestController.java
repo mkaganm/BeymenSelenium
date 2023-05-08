@@ -1,7 +1,6 @@
 package com.beymen.base;
 
 import com.beymen.data.GetDataOptions;
-import com.beymen.data.Variables;
 import core.controller.ServiceController;
 import core.driver.DriverChrome;
 import core.utility.Logging;
@@ -22,7 +21,7 @@ public class BeymenTestController extends ServiceController {
 
     }
 
-//    @AfterMethod(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     public void close() {
         driver.closeDriver();
         Logging.pass("Closing driver.");
