@@ -3,6 +3,7 @@ package core.driver;
 import core.utility.Logging;
 import java.util.Collections;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -54,11 +55,51 @@ public abstract class Drivers {
         } catch (Exception e) {
             Logging.fail(e.getMessage());
         }
+    }
 
+    public void cleanText(By elementName, int textSize){
+        try {
+            driver.findElement(elementName).clear();
+
+            for (int i = 0; i < textSize; i++) {
+
+                driver.findElement(elementName).sendKeys(Keys.BACK_SPACE);
+            }
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            Logging.fail(e.getMessage());
+        }
+    }
+
+    public void clickEnter(By elementName) {
+        try {
+
+            driver.findElement(elementName).sendKeys(Keys.ENTER);
+
+        } catch (Exception e) {
+            Logging.fail(e);
+        }
     }
 
     public void closeDriver() {
         driver.close();
+    }
+
+    public void control(boolean statement, String onTrue, String onFalse) {
+        if (statement) {
+            Logging.pass(onTrue);
+        } else {
+            Logging.fail(onFalse);
+        }
+    }
+
+    public void wait1s(){
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+            Logging.fail(e.getMessage());
+        }
     }
 
 }

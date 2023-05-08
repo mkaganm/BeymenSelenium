@@ -32,7 +32,6 @@ public class GetDataOptions {
     }
 
     public static GetDataOptions getParameters() {
-        Logging.pass(data);
         return data;
     }
 }

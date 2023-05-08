@@ -9,13 +9,28 @@ public class BeymenTests extends BeymenTestController {
     @Test
     @Epic("Beymen Tests")
     @Description("Beymen Tests")
-
     public void testCase() {
 
         startTest(new HomePage(driver))
                 .openHomePage()
                 .acceptCookies()
                 .selectGender()
+                .searchProduct1()
+                .cleanSearchBox()
+                .searchProduct2()
+                .searchClickEnter()
+                .getProductPage()
+                .selectRandomProduct()
+                .saveProductDetails()
+                .selectProductSize()
+                .clickAddCartButton()
+                .clickGoToCartButton()
+                .getCartPage()
+                .checkProductDetails()
+                .clickPieceButton()
+                .increaseQuantity()
+                .checkPiece()
+                .removeCartProduct()
         ;
 
     }

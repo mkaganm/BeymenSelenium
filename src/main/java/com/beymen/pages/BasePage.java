@@ -7,5 +7,4 @@ public class BasePage {
 
     public Variables variables = new Variables();
 
-
 }
